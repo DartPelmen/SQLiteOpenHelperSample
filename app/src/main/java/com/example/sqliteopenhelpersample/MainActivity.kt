@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("SIZE", cursor.count.toString())
         with(cursor) {
             while (moveToNext()) {
-                Log.d("AUTHOR", "$cursor.getLong(getColumnIndexOrThrow(BaseColumns._ID)) -|||- ${cursor.getString(getColumnIndexOrThrow(DatabaseContract.Authors.columnLastName))} -|||- ${cursor.getString(getColumnIndexOrThrow(DatabaseContract.Authors.columnFirstName))} -|||- ${cursor.getString(getColumnIndexOrThrow(DatabaseContract.Authors.columnPatronymic))}")
+                Log.d("AUTHOR", "${cursor.getLong(getColumnIndexOrThrow(BaseColumns._ID))} -|||- ${cursor.getString(getColumnIndexOrThrow(DatabaseContract.Authors.columnLastName))} -|||- ${cursor.getString(getColumnIndexOrThrow(DatabaseContract.Authors.columnFirstName))} -|||- ${cursor.getString(getColumnIndexOrThrow(DatabaseContract.Authors.columnPatronymic))}")
             }
         }
         cursor.close()
